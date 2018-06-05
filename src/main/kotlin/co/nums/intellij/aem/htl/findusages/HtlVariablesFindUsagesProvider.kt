@@ -41,6 +41,6 @@ class HtlVariablesFindUsagesProvider : FindUsagesProvider {
         else -> "<unknown name>"
     }
 
-    override fun getHelpId(psiElement: PsiElement) = null
+    override fun getHelpId(psiElement: PsiElement): String? = null
 
 }

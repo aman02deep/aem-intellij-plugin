@@ -179,19 +179,35 @@
 
         <psi.referenceContributor
                 language="HTML"
-                implementation="co.nums.intellij.aem.htl.psi.references.HtlVariablesReferenceContributor"/>
-
+                implementation="co.nums.intellij.aem.htl.psi.references.HtlVariableReferenceContributor"/>
+        <!--
         <psi.referenceContributor
                 language="HTL"
                 implementation="co.nums.intellij.aem.htl.psi.references.HtlGlobalObjectsReferencesContributor"/>
+        -->
+
+        <!--  -->
+        <!--
+        <referencesSearch
+                order="first"
+                implementation="co.nums.intellij.aem.htl.psi.references.HtlVariableReferencesSearch"/>
+        -->
+
+        <!--<useScopeEnlarger implementation="co.nums.intellij.aem.htl.psi.references.HtlDeclarationSearchScopeEnlarger"/>-->
+        <!--<useScopeOptimizer implementation="co.nums.intellij.aem.htl.psi.references.HtlDeclarationSearchScopeOptimizer"/>-->
 
         <readWriteAccessDetector
                 implementation="co.nums.intellij.aem.htl.highlighter.HtlReadWriteAccessDetector"/>
 
+        <!-- FIXME: it breaks attribute highlighting if cursor is at some beginning position -->
+        <!--
         <lang.findUsagesProvider
                 language="HTML"
                 order="first"
                 implementationClass="co.nums.intellij.aem.htl.findusages.HtlVariablesFindUsagesProvider"/>
+        -->
+
+        <!--<findUsagesHandlerFactory implementation="co.nums.intellij.aem.htl.findusages.HtmlAttributeUsagesProvider"/>-->
 
         <renamePsiElementProcessor
                 order="before xmlAttribute"

@@ -26,7 +26,7 @@ class HtlGlobalObjectsReferencesProvider : PsiReferenceProvider() {
         return PsiTreeUtil.findChildrenOfType(htlFile, HtlVariable::class.java)
                 .filterNot { it == variable }
                 .filter { it.text.equals(variableIdentifier, ignoreCase = true) }
-                .mapNotNull { HtlGlobalObjectReference(it) }
+                .mapNotNull { HtlGlobalObjectReference(element) }
                 .toTypedArray()
     }
 

@@ -1,7 +1,6 @@
 package co.nums.intellij.aem.htl.refactoring
 
 import co.nums.intellij.aem.htl.definitions.isHtlIterableBlock
-
 import co.nums.intellij.aem.htl.extensions.isHtlVariableDeclaration
 import co.nums.intellij.aem.htl.psi.references.HtlVariableReference
 import com.intellij.openapi.diagnostic.Logger
